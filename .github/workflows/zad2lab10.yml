@@ -56,4 +56,4 @@ jobs:
           git config user.email 'weronika.nowak@pollub.edu.pl'
           sed -i 's|image: weronika00/hefalump:.*|image: weronika00/hefalump:${{ vars.VERSION }}|g' ./deployment.yaml
           git diff --quiet && git diff --staged --quiet || git commit -am 'Update ${{ vars.VERSION }}'
-          git push origin main
+          git push origin master
